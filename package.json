@@ -1,7 +1,7 @@
 {
   "name": "@openwebf/avaiable-apis",
   "version": "1.0.0",
-  "description": "YAML data of all WhatWG/W3C standard API supported.",
+  "description": "The collection of WhatWG/W3C standards supported by WebF.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
