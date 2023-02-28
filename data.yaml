@@ -792,7 +792,9 @@ CSS:
     - border-right-width
     - border-bottom-width
     - border-left-width
-    - border-style
+    - name: border-style
+      supported_values:
+       - solid
     - border-top-style
     - border-right-style
     - border-bottom-style
@@ -846,7 +848,10 @@ CSS:
     - font-size
     - line-height
     - font-family
-    - vertical-align
+    - name: vertical-align
+      supported_values:
+        - top
+        - bottom
     - name: text-overflow
       supported_values:
         - ellipsis
@@ -889,13 +894,65 @@ CSS:
     - flex-shrink
     - flex-basis
     - flex-flow
-    - flex-direction
-    - flex-wrap
-    - justify-content
-    - text-align
-    - align-items
-    - align-self
-    - align-content
+    - name: flex-direction
+      supported_values:
+        - row-reverse
+        - column
+        - column-reverse
+        - row
+    - name: flex-wrap
+      supported_values:
+        - wrap
+        - wrap-reverse
+        - nowrap
+    - name: justify-content
+      supported_values:
+        - flex-end
+        - end
+        - center
+        - space-between
+        - space-around
+        - space-evenly
+        - flex-start
+        - start
+    - name: text-align
+      supported_values:
+        - end
+        - right
+        - center
+        - justify
+        - start
+        - left
+    - name: align-items
+      supported_values:
+        - flex-start
+        - start
+        - flex-end
+        - end
+        - center
+        - baseline
+        - stretch
+    - name: align-self
+      supported_values:
+        - flex-start
+        - start
+        - flex-end
+        - end
+        - center
+        - stretch
+        - baseline
+        - auto
+    - name: align-content
+      supported_values:
+        - flex-start
+        - start
+        - flex-end
+        - end
+        - center
+        - space-around
+        - space-between
+        - space-evenly
+        - stretch
     - sliver-direction # WebF provides a special API for controlling the scroll direction of the sliver container
     - transform
     - transform-origin
