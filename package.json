@@ -1,0 +1,25 @@
+{
+  "name": "@openwebf/avaiable-apis",
+  "version": "1.0.0",
+  "description": "YAML data of all WhatWG/W3C standard API supported.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openwebf/webf-available-apis.git"
+  },
+  "keywords": [
+    "WebF"
+  ],
+  "author": "openWebf authors.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/openwebf/webf-available-apis/issues"
+  },
+  "homepage": "https://github.com/openwebf/webf-available-apis#readme",
+  "dependencies": {
+    "yaml": "^2.2.1"
+  }
+}

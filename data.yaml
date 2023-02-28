@@ -1,0 +1,998 @@
+DOM:
+  Event:
+    properties:
+      - bubbles
+      - cancelBubble
+      - cancelable
+      - currentTarget
+      - defaultPrevented
+      - srcElement
+      - target
+      - isTrusted
+      - timeStamp
+      - type
+    methods:
+      - initEvent
+      - preventDefault
+      - stopImmediatePropagation
+      - stopPropagation
+  CustomEvent:
+    properties:
+      - detail
+    methods:
+      - initCustomEvent
+  EventTarget:
+    methods:
+      - name: addEventListener
+        suggest: capture listener are not supported.
+      - removeEventListener
+      - dispatchEvent
+      
+  Node:
+    properties:
+      - ELEMENT_NODE
+      - ATTRIBUTE_NODE
+      - TEXT_NODE
+      - COMMENT_NODE
+      - DOCUMENT_NODE
+      - DOCUMENT_TYPE_NODE
+      - DOCUMENT_FRAGMENT_NODE
+      - nodeType
+      - nodeName
+      - nodeValue
+      - childNodes
+      - firstChild
+      - isConnected
+      - lastChild
+      - nextSibling
+      - ownerDocument
+      - parentNode
+      - previousSibling
+      - firstElementChild
+      - lastElementChild
+      - children
+    methods:
+      - appendChild
+      - cloneNode
+      - contains
+      - insertBefore
+      - isEqualNode
+      - isSameNode
+      - removeChild
+      - remove
+      - replaceChild
+  Element:
+    properties:
+      - id
+      - className
+      - classList
+      - name
+      - attributes
+      - style
+      - clientHeight
+      - clientLeft
+      - clientTop
+      - clientWidth
+      - clientWidth
+      - outerHTML
+      - innerHTML
+      - ownerDocument
+      - scrollLeft
+      - scrollTop
+      - scrollwidth
+      - scrollHeight
+      - prefix
+      - localName
+      - namespaceURI
+      - tagName
+    methods:
+      - getAttribute
+      - setAttribute
+      - removeAttribute
+      - hasAttribute
+      - getBoundingClientRect
+      - getElementsByClassName
+      - getElementsByTagName
+      - scroll
+      - scrollBy
+      - scrollTo
+      - toBlob # WebF provides a special API for exporting the current rendering pixels into PNG images.
+  Document:
+    properties:
+      - all
+      - body
+      - cookie
+      - head
+      - documentElement
+      - location
+    methods:
+      - createElement
+      - createElementNS
+      - createTextNode
+      - createDocumentFragment
+      - createComment
+      - createEvent
+      - getElementById
+      - getElementsByClassName
+      - getElementsByTagName
+      - getElementsByName
+      - querySelector
+  CharacterData:
+    properties:
+      - data
+      - length
+  Comment:
+  Text:
+  DocumentFragment:
+  DOMTokenList:
+    properties:
+      - length
+      - value
+      - forEach
+      - keys
+      - entries
+      - supported_values
+      - [Symbol.iterator]
+    methods:
+      - item
+      - contains
+      - add
+      - remove
+      - toggle
+      - replace
+      - supports
+      - toString
+  NodeList:
+    properties:
+      - length
+    methods:
+      - item
+
+CSSOM:
+  BoundingClientRect:
+    properties:
+      - x
+      - y
+      - width
+      - height
+      - top
+      - right
+      - bottom
+      - left
+  CSSStyleDeclaration:
+    properties:
+      - length
+    methods:
+      - getPropertyValue
+      - setProperty
+      - removeProperty
+  Screen:
+    properties:
+      - width
+      - height
+      - availWidth
+      - availHeight
+  matchMedia:
+  MediaQueryList:
+    properties:
+      - matches
+      - media
+    methods:
+      - addListener
+      - removeListener
+
+UIEvents:
+  AnimationEvent:
+    properties:
+      - animationName
+      - elapsedTime
+      - pseudoElement
+  CloseEvent:
+    properties:
+      - code
+      - reason
+      - wasClean
+  ErrorEvent:
+    properties:
+      - message
+      - filename
+      - lineno
+      - colno
+      - error
+  FocusEvent:
+    properties:
+      - relatedTarget
+  GestureEvent:
+    properties:
+      - state
+      - direction
+      - deltaX
+      - deltaY
+      - velocityX
+      - velocityY
+      - scale
+      - rotation
+  InputEvent:
+    properties:
+      - inputType
+      - data
+  #  WebF provides a special API for the event objects of the appear and disappear event handlers
+  IntersectionChangeEvent:
+    properties:
+      - intersectionRatio
+  KeyboardEvent:
+    properties:
+      - altKey
+      - charCode
+      - code
+      - ctrlKey
+      - key
+      - keyCode
+      - location
+      - metaKey
+      - repeat
+      - shiftKey
+      - DOM_KEY_LOCATION_LEFT
+      - DOM_KEY_LOCATION_NUMPAD
+      - DOM_KEY_LOCATION_RIGHT
+      - DOM_KEY_LOCATION_STANDARD
+  MessageEvent:
+    properties:
+      - data
+      - origin
+      - lastEventId
+      - source
+  MouseEvent:
+    properties:
+      - clientX
+      - clientY
+      - offsetX
+      - offsetY
+  PopStateEvent:
+    properties:
+      - state
+  PromiseRejectionEvent:
+    properties:
+      - promise
+      - reason
+  TouchEvent:
+    properties:
+      - touches
+      - targetTouches
+      - changedTouches
+      - altKey
+      - metaKey
+      - ctrlKey
+      - shiftKey
+  Touch:
+    properties:
+      - identifier
+      - target
+      - screenX
+      - screenY
+      - clientX
+      - clientY
+      - pageX
+      - pageY
+      - radiusX
+      - radiusY
+      - rotationAngle
+      - force
+  TouchList:
+    properties:
+      - length
+    methods:
+      - item
+  TransitionEvent:
+    properties:
+      - elapsedTime
+      - propertyName
+      - pseudoElement
+  UIEvent:
+    properties:
+      - detail
+      - view
+      - which
+
+Performance_API:
+  Performance:
+    properties:
+      - timeOrigin
+    methods:
+      - now
+      - toJSON
+      - getEntries
+      - getEntriesByType
+      - getEntriesByName
+      - mark
+      - measure
+      - clearMarks
+      - clearMeasures
+  PerformanceEntry:
+    properties:
+      - name
+      - entryType
+      - startTime
+      - duration
+    methods:
+      - toJSON
+  PerformanceMark:
+    properties:
+      - detail
+  PerformanceMeasure:
+    properties:
+      - detail
+
+FILE_API:
+  Blob:
+    properties:
+      - size
+      - type
+    methods:
+      - arrayBuffer
+      - slice
+      - text
+
+Console_API:
+  console:
+    methods:
+      - log
+      - info
+      - warn
+      - debug
+      - error
+      - dirxml
+      - dir
+      - table
+      - trace
+      - count
+      - countReset
+      - assert
+      - time
+      - timeLog
+      - timeEnd
+      - group
+      - groupCollapsed
+      - groupEnd
+      - clear
+
+Fetch_API:
+  Request:
+    properties:
+      - url
+      - method
+      - headers
+      - mode
+    methods:
+      - clone
+  Response:
+    properties:
+      - body
+      - bodyUsed
+      - headers
+      - ok
+      - redirected
+      - status
+      - statusText
+      - type
+      - url
+    methods:
+      - clone
+      - redirect
+      - error
+  Headers:
+    methods:
+      - append
+      - delete
+      - forEach
+      - get
+      - has
+      - set
+  fetch:
+
+Clipboard_API:
+  Clipboard:
+    methods:
+      - readText
+      - writeText
+
+# Unstandard API for reading network informations.       
+Connection_API:
+  Connection:
+    properties:
+      - onchange
+    methods: 
+      - getConnectivity
+
+URL_API:
+  URLSearchParams:
+    methods:
+      - append
+      - delete
+      - get
+      - getAll
+      - has
+      - set
+      - forEach
+      - toString
+  URL:
+    properties:
+      - href
+      - protocol
+      - host
+      - hostname
+      - port
+      - pathname
+      - search
+      - hash
+      - origin
+    methods:
+      - toString
+
+# WebF-specific API, used to fulfill some WebF exclusive functions.
+WebF_API:
+  # The bridge between JavaScript and Dart, allow developers to call Dart from JavaScripts or call JavaScripts from Dart.
+  MethodChannel:
+    methods:
+      - addMethodCallHandler
+      - removeMethodCallHandler
+      - clearMethodCallHandler
+      - invokeMethod
+  WebF:
+    methods:
+      # WebF Module API: used to invoke the WebF module's API.
+      - invokeModule
+      # WebF Module API: used to receive events from WebF modules.
+      - addWebfModuleListener
+      # WebF Module API: used to clear all listeners from WebF modules.
+      - clearWebfModuleListener
+      # WebF Module API: used to remove a specific event listener from WebF modules
+      - removeWebfModuleListener
+
+XMLHttpRequest:
+  XMLHttpRequest:
+    properties:
+      - UNSENT
+      - OPENED
+      - HEADERS_RECEIVED
+      - LOADING
+      - DONE
+      - readyState
+      - onreadystatechange
+      - responseText
+      - responseXML
+      - status
+      - statusText
+      - response
+      - settings
+      - headers
+      - headersCache
+      - sendFlag
+      - errorFlag
+    methods:
+      - open
+      - setRequestHeader
+      - getResponseHeader
+      - getAllResponseHeaders
+      - send
+      - abort
+      - isAllowedHttpMethod
+      - getRequestHeader
+      - handleError
+      - setState
+
+HTML: 
+  WindowOrWorkerGlobalScope:
+    methods:
+      - setTimeout
+      - setInterval
+      - clearTimeout
+      - clearInterval
+  History:
+    properties:
+      - length
+      - state
+    methods:
+      - back
+      - forward
+      - go
+      - pushState
+      - replaceState
+  Navigator:
+    properties:
+      - userAgent
+      - platform
+      - language
+      - languages
+      - appName
+      - appVersion
+      - hardwareConcurrency
+      - clipboard
+      - connection
+  Window:
+    properties:
+      - window
+      - parent
+      - self
+      - screen
+      - document
+      - scrollX
+      - scrollY
+      - devicePixelRatio
+      - colorScheme
+      - innerWidth
+      - innerHeight
+      - webf
+      - console
+      - location
+      - history
+      - navigator
+      - asyncStorage
+      - fetch
+      - webf
+    methods:
+      - open
+      - scroll
+      - scrollTo
+      - scrollBy
+      - postMessage
+      - requestAinmationFrame
+      - cancelAnimationFrame
+      - getComputedStyle
+  # Unstandard API for store data on devices.
+  AsyncStorage:
+    methods:
+      - getItem
+      - setItem
+      - removeItem
+      - clear
+      - getAllKeys
+      - length
+  Location:
+    properties:
+      - href
+      - origin
+      - host
+      - hostname
+      - port
+      - pathname
+      - search
+      - hash
+      - assign
+    methods:
+      - reload
+      - replace
+      - toString
+  HTMLCanvasElement:
+    properties:
+      - width
+      - height
+    methods:
+      - getContext # only support 2d.
+  CanvasRenderingContext2D:
+    properties:
+      - fillStyle
+      - direction
+      - font
+      - strokeStyle
+      - lineCap
+      - lineDashOffset
+      - lineJoin
+      - lineWidth
+      - miterLimit
+      - textAlign
+      - textBaseline
+    methods:
+      - arc
+      - arcTo
+      - beginPath
+      - bezierCurveTo
+      - clearRect
+      - closePath
+      - clip
+      - drawImage
+      - ellipse
+      - fill
+      - fillRect
+      - fillText
+      - lineTo
+      - moveTo
+      - rect
+      - restore
+      - resetTransform
+      - rotate
+      - quadraticCurveTo
+      - stroke
+      - strokeRect
+      - save
+      - scale
+      - strokeText
+      - setTransform
+      - transform
+      - translate
+      # - createLinearGradient
+      # - createRadialGradient
+      # - createPattern
+      - reset
+  # CanvasPattern:
+  #   properties:
+  #     - setTransform
+  # CanvasGradient:
+  #   properties:
+  #     - addColorStop
+  # WebF provides a special Element kind for rendering Flutter widgets with HTMLElements.
+  WidgetElement:
+    # All properties and methods from WidgetElement are defined in Dart and are already available to use.
+  HTMLInputElement:
+    properties:
+      # - width
+      # - height
+      - defaultValue
+      - value
+      # - accept
+      # - autocomplete
+      - autofocus
+      # - checked
+      - disabled
+      # - min
+      # - max
+      # - minLength
+      # - maxLength
+      # - size
+      # - multiple
+      # - name
+      # - step
+      # - pattern
+      # - required
+      - readonly
+      - placeholder
+      - type
+      # - inputMode
+    methods:
+      - focus
+      - blur
+  HTMLTextAreaElement:
+    properties:
+      - defaultValue
+      - value
+      # - cols
+      # - rows
+      # - wrap
+      # - autofocus
+      # - autocomplete
+      - disabled
+      # - minLength
+      # - maxLength
+      # - name
+      - placeholder
+      # - readonly
+      # - required
+      # - inputMode
+    methods:
+      - focus
+      - blur
+  HTMLAllCollection:
+    properties:
+      - length
+    methods:
+      - item
+  HTMLAnchorElement:
+    properties:
+      - target
+      - href
+  HTMLBodyElement:
+    properties:
+      - onmessage
+      - onpopstate
+      - onrejectionhandled
+      - onunhandledrejection
+  HTMLDivElement:
+  HTMLHeadElement:
+  HTMLHTMLElement:
+  HTMLIFrameElement:
+  HTMLElement:
+    properties:
+      - offsetTop
+      - offsetLeft
+      - offsetWidth
+      - offsetHeight
+    methods:
+      - click
+  HTMLImageElement:
+    properties:
+      # - alt
+      - src
+      # - srcset
+      # - sizes
+      - width
+      - height
+      - naturalWidth
+      - naturalHeight
+      - complete
+      - scaling
+      # - currentSrc
+  HTMLLinkElement:
+    properties:
+      - disabled
+      - rel
+      - href
+      - type
+  HTMLScriptElement:
+    properties:
+      - src
+      - type
+      - async
+  HTMLTemplateElement:
+    properties:
+      - content
+  Image:
+  GlobalEventHandlers:
+    properties:
+      - onabort
+      - onanimationcancel
+      - onanimationend
+      - onanimationstart
+      - onblur
+      - onchangd
+      - onclick
+      - onerror
+      - onfocus
+      - oninput
+      - onload
+      - onscroll
+      - ontouchcancel
+      - ontouchend
+      - ontouchmove
+      - ontouchstart
+      - ontransitioncancel
+      - ontransitionend
+      - ontransitionrun
+      - ontransitionstart
+
+CSS:
+  properties:
+    - name: display
+      supported_values:
+        - block
+        - inline
+        - inline-block
+        - inline-flex
+        - flow
+        - flex
+        - none
+        - sliver # WebF provides a special API for a high-performance scrolling container.
+    - name: position
+      supported_values:
+        - static
+        - relative
+        - absolute
+        - fixed
+        - sticky
+    - width
+    - min-width
+    - max-width
+    - height
+    - min-height
+    - max-height
+    - top
+    - left
+    - right
+    - bottom
+    - margin
+    - margin-top
+    - margin-right
+    - margin-bottom
+    - margin-left
+    - padding
+    - padding-top
+    - padding-left
+    - padding-right
+    - padding-bottom
+    - border-top-width
+    - border-right-width
+    - border-bottom-width
+    - border-left-width
+    - border-style
+    - border-top-style
+    - border-right-style
+    - border-bottom-style
+    - border-left-style
+    - border-color
+    - border-top-color
+    - border-right-color
+    - border-bottom-color
+    - border-left-color
+    - border-radius
+    - border-top-left-radius
+    - border-top-right-radius
+    - border-bottom-right-radius
+    - border-bottom-left-radius
+    - opacity
+    - name: z-index
+      limits: >-
+        Stacking context is not supported, so it is not possible to change the
+        z-index order based on the DOM structure.
+    - name: visibility
+      supported_values:
+        - visible
+        - hidden
+    - name: content-visibility
+      supported_values:
+        - visible
+        - hidden
+    - box-shadow
+    - color
+    - caret-color
+    - overflow
+    - overflow-x
+    - overflow-y
+    - background
+    - background-attachment
+    - background-repeat
+    - background-position
+    - background-position-x
+    - background-position-y
+    - background-image
+    - background-size
+    - background-color
+    - background-origin
+    - background-clip
+    - font
+    - name: font-style
+      supported_values:
+        - normal
+        - italic
+    - font-weight
+    - font-size
+    - line-height
+    - font-family
+    - vertical-align
+    - name: text-overflow
+      supported_values:
+        - ellipsis
+        - fade
+        - clip
+    - name: text-decoration
+      supported_values:
+        - line-through
+        - overline
+        - underline
+        - none
+    - name: text-decoration-line
+      supported_values:
+        - line-through
+        - overline
+        - underline
+        - none
+    - text-decoration-color
+    - name: text-decoration-style
+      supported_values:
+        - double
+        - dotted
+        - dashed
+        - wavy
+        - solid
+    - text-shadow
+    - letter-spacing
+    - word-spacing
+    - name: white-space
+      supported_values:
+        - nowrap
+        - pre
+        - pre-wrap
+        - pre-line
+        - break-spaces
+        - normal
+    - line-clamp
+    - flex
+    - flex-grow
+    - flex-shrink
+    - flex-basis
+    - flex-flow
+    - flex-direction
+    - flex-wrap
+    - justify-content
+    - text-align
+    - align-items
+    - align-self
+    - align-content
+    - sliver-direction # WebF provides a special API for controlling the scroll direction of the sliver container
+    - transform
+    - transform-origin
+    - transition
+    - transition-property
+    - transition-duration
+    - transition-timing-function
+    - transition-delay
+    - name: object-fit
+      supported_values:
+        - contain
+        - cover
+        - none
+        - scale-down
+        - fit-width
+        - fit-height
+        - fill
+    - object-position
+    - filter
+  functions:
+    - calc
+    - var
+    - env
+    - url
+    - grayscale
+    - sepia
+    - blur
+    - linear-gradient
+    - repeating-linear-gradient
+    - radial-gradient
+    - repeating-radial-gradient
+    - conic-gradient
+    - steps
+    - cubic-bezier
+    - matrix
+    - matrix3d
+    - translate
+    - translate3d
+    - translatex
+    - translatey
+    - translatez
+    - rotate
+    - rotate3d
+    - rotatex
+    - rotatey
+    - rotatez
+    - scale3d
+    - scale
+    - scalex
+    - scaley
+    - scalez
+    - skew
+    - skewx
+    - skewy
+    - perspective
+    - safe-area-inset-top
+    - safe-area-inset-left
+    - safe-area-inset-right
+    - safe-area-inset-bottom
+  at-rules:
+    - '@keyframe'
+  length_supported_values:
+    - px
+    - em
+    - rem
+    - vh
+    - vw
+    - vmin
+    - vmax
+    - '%'
+    - auto
+    - normal
+    - initial
+  selectors:
+    - '*'
+    - id
+    - class
+    - type
+    - attribute
+  grouping_selectors: true
+  combinators:
+    - ' '
+    - '>'
+    - '~'
+    - +
+  pseudos:
+    - root
+    - empty
+    - blank
+    - first-child
+    - last-child
+    - first-of-type
+    - last-of-type
+    - only-of-type
+    - only-child
+    - link
+    - nth-child
+    - nth-last-child
+    - nth-of-type
+    - nth-last-of-type
