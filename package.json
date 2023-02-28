@@ -1,6 +1,6 @@
 {
   "name": "@openwebf/avaiable-apis",
-  "version": "1.0.0",
+  "version": "0.13.3",
   "description": "The collection of WhatWG/W3C standards supported by WebF.",
   "main": "index.js",
   "scripts": {
