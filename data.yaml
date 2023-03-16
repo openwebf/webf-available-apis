@@ -117,6 +117,7 @@ DOM:
       - getElementsByTagName
       - getElementsByName
       - querySelector
+      - querySelectorAll
   CharacterData:
     properties:
       - data
@@ -961,6 +962,15 @@ CSS:
     - transition-duration
     - transition-timing-function
     - transition-delay
+    - animation
+    - animation-name
+    - animation-duration
+    - animation-timing-function
+    - animation-delay
+    - animation-iteration-count
+    - animation-direction
+    - animation-fill-mode
+    - animation-play-state
     - name: object-fit
       supported_values:
         - contain
